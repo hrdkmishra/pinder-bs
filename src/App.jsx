@@ -1,6 +1,7 @@
 import React from "react";
 import Landing from "./Components/Landing/Landing";
 import Nav from "./Components/Nav/Nav";
+import Create from "./Components/Create/Create";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
           <Landing />
         </Route>
         <Route path="/register">
-          <h1>I am Login</h1>
+          <Create />
         </Route>
       </Switch>
     </Router>

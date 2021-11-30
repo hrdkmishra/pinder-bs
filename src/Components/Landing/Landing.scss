@@ -1,23 +1,26 @@
-body {
-  background-color: rgba(0, 0, 0, 0.5);
-  background: url(../../Assets/bg.jpg) no-repeat center center fixed;
-  background-size: cover;
-}
-
 a {
   color: #fff;
   text-decoration: none;
+  &:hover {
+    color: #fff;
+  }
 }
 
 #fixed {
   height: 100vh;
   width: 100vw;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
   background-color: rgba(0, 0, 0, 0.5);
   pointer-events: none;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+  }
 }
 
 .landing {

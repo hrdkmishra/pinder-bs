@@ -1,13 +1,16 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import BG from "../../Assets/bg.jpg";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Landing.scss";
 
 function Landing() {
   return (
     <React.Fragment>
-      <div id="fixed"></div>
+      <div id="fixed">
+        <img src={BG} alt="some picha" />
+      </div>
       <div className="landing">
         <span>
           <h3 className="main-header">
