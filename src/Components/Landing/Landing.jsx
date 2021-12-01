@@ -10,6 +10,7 @@ function Landing() {
     <React.Fragment>
       <div id="fixed">
         <img src={BG} alt="some picha" />
+        <div className="darkened"></div>
       </div>
       <div className="landing">
         <span>

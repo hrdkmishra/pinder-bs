@@ -35,60 +35,62 @@ function Create() {
   };
   return (
     <React.Fragment>
-      <h3 className="create-header">Create a Pinder account using MES ID</h3>
-      <Form
-        className="create-form"
-        onSubmit={function (e) {
-          e.preventDefault();
-        }}
-      >
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Email address</Form.Label>
-          <Form.Control
-            type="email"
-            placeholder="Please enter your MES mail"
-            onChange={function (event) {
-              setEmail(event.target.value);
-            }}
-            value={email}
-          />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Password</Form.Label>
-          <Form.Control
-            type="password"
-            placeholder="Please enter your MES password"
-            onChange={function (event) {
-              setPass(event.target.value);
-            }}
-            value={pass}
-          />
-        </Form.Group>
-        <Button
-          variant="danger"
-          type="submit"
-          onClick={function () {
-            if (!filterEmail(email)) {
-              alert("Please use MES id");
-            } else {
-              createAccount();
-            }
+      <div className="create-div">
+        <h3 className="create-header">Create a Pinder account using MES ID</h3>
+        <Form
+          className="create-form"
+          onSubmit={function (e) {
+            e.preventDefault();
           }}
         >
-          Submit
-        </Button>
-        <Button
-          style={{ marginLeft: "10px" }}
-          variant="secondary"
-          type="submit"
-          onClick={function () {
-            setEmail("");
-            setPass("");
-          }}
-        >
-          Clear Form
-        </Button>
-      </Form>
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label>Email address</Form.Label>
+            <Form.Control
+              type="email"
+              placeholder="Please enter your MES mail"
+              onChange={function (event) {
+                setEmail(event.target.value);
+              }}
+              value={email}
+            />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Label>Password</Form.Label>
+            <Form.Control
+              type="password"
+              placeholder="Please enter your MES password"
+              onChange={function (event) {
+                setPass(event.target.value);
+              }}
+              value={pass}
+            />
+          </Form.Group>
+          <Button
+            variant="danger"
+            type="submit"
+            onClick={function () {
+              if (!filterEmail(email)) {
+                alert("Please use MES id");
+              } else {
+                createAccount();
+              }
+            }}
+          >
+            Submit
+          </Button>
+          <Button
+            style={{ marginLeft: "10px" }}
+            variant="secondary"
+            type="submit"
+            onClick={function () {
+              setEmail("");
+              setPass("");
+            }}
+          >
+            Clear Form
+          </Button>
+        </Form>
+      </div>
     </React.Fragment>
   );
 }
